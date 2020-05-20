@@ -10,6 +10,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
 5. Image of final prototype
 
 ## TO DO
+- [ ] Validation form -> GET First Name, email, card encrypted
 - [ ] Center some elements
 - [ ] Enter Promo Code Interactivity
 - [x] Un título con el nombre de tu proyecto.
@@ -22,7 +23,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
     usuarios.
   - [ ] Luego colocarás la foto de tu primer prototipo en papel.
   - [ ] Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  - [ ] Imagen del prototipo final.
+  - [x] Imagen del prototipo final.
 
 ## Topics to check
 - Is it responsive?
