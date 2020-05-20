@@ -1,6 +1,7 @@
 import validator from './validator.js';
 
-console.log(validator.isValid('4137894711755904'));
+// console.log(validator.isValid('4137894711755904'));
+let total = 0.00;
 
 const homeView = document.getElementById("homeView");
 const checkoutView = document.getElementById("checkoutView");
@@ -15,14 +16,14 @@ const partyTicketQuantity = document.getElementById("ticket-quantity-2");
 const agreeTermsConditions = document.getElementById("agreeTermsConditions");
 const totalBuy = document.getElementById("totalBuy")
 const totalCheckout = document.getElementById("totalCheckout")
-let total = 0.00;
 
 const buyTickets = function () {
     homeView.classList.add("hide");
     buyView.classList.remove("hide");
 }
 
-const checkout = function () {
+const checkout = function (evt) {
+    evt.preventDefault();
     if (total > 0 && agreeTermsConditions.checked) {
         buyView.classList.add("hide");
         checkoutView.classList.remove("hide");
