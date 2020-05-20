@@ -30,6 +30,9 @@ This project is the event page for PachaConf where you can buy your tickets :)
   - [ ] Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   - [x] Imagen del prototipo final.
 
+## Questions to Lupo/Mariano
+- Is the luhn algorithm well explained? I think the image (spacially the arroy) confuses the developer.
+
 ## Topics to check
 - Is it responsive?
 - Can we create the cart animation increase in numbers?
