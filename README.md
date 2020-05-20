@@ -10,7 +10,9 @@ This project is the event page for PachaConf where you can buy your tickets :)
 5. Image of final prototype
 
 ## TO DO
-- [ ] Write tests
+- [ ] Rewrite luhn algorithm
+- [ ] Check tests
+- [x] Write tests
 - [ ] Change innerHTML for textContent when not html needed.
 - [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
 - [x] Validation form -> GET First Name, email, card encrypted.
