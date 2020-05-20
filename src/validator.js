@@ -1,8 +1,9 @@
 const validator = {
   isValid: (creditCardNumber) => {
-    console.log(creditCardNumber)
     const n = creditCardNumber.length;
-    let digitsSum = 0
+    if (n === 0)
+      return false;
+    let digitsSum = 0;
     for (let i = 0; i < n; i++) {
       let currDigit = parseInt(creditCardNumber[i]);
       if (i % 2 === 0) {
