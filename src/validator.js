@@ -21,7 +21,7 @@ const validator = {
     const n = creditCardNumber.length;
     if (n < 4)
       return creditCardNumber;
-    return '🐱'.repeat(n - 4) + creditCardNumber.slice(-4);
+    return 'X'.repeat(n - 4) + creditCardNumber.slice(-4);
   }
 };
 
