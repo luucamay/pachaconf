@@ -1,12 +1,15 @@
 const validator = {
-  isValid: (creditCardNumber) => {
-    const n = creditCardNumber.length;
-    if (n === 0)
-      return false;
-    let digitsSum = 0;
+  isValid: (CardNumber) => {
+    const n = CardNumber.length;
+    let digitsSum = 0
+
+    let arrayCardNumber = CardNumber.split('');
+    arrayCardNumber = arrayCardNumber.reverse();
+    const creditCardNumber = arrayCardNumber.join('');
+
     for (let i = 0; i < n; i++) {
       let currDigit = parseInt(creditCardNumber[i]);
-      if (i % 2 === 0) {
+      if (i % 2 === 1) {
         currDigit *= 2;
         if (currDigit > 9)
           currDigit -= 9;
