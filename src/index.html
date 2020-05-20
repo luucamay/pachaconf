@@ -138,8 +138,8 @@
           <h3>Personal Information</h3>
           <ul>
             <li>
-              <input type="text" id="fname" name="first_name" placeholder="First Name">
-              <input type="text" id="lname" name="last_name" placeholder="Last Name">
+              <input type="text" id="first-name" name="first_name" placeholder="First Name">
+              <input type="text" id="last-name" name="last_name" placeholder="Last Name">
             </li>
             <li>
               <input type="email" id="email" name="user_email" placeholder="Email">
@@ -153,7 +153,7 @@
           <h3>Payment Details</h3>
           <ul>
             <li>
-              <input type="text" id="cardNumber" name="Number" placeholder="Cardi Number*" maxlength="16"
+              <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16"
                 pattern="[0-9]+" required>
             </li>
             <li>
@@ -175,7 +175,7 @@
         <svg class="checkmark" viewBox="0 0 52 52">
           <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
           <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
-        <h3>Thanks for your order ${Maria}</h3>
+        <h3>Thanks for your order <strong id="thanks-name">NAME HERE</strong></h3>
       </div>
       <div class="boxed">
         <h1>YOU WILL BE PART OF PACHA CONF</h1>
@@ -183,7 +183,7 @@
       </div>
       <div class="boxed" id="ticket-info">
         <p>1 Ticket sent to:</p>
-        <p>maria@email.co</p>
+        <p id="thanks-email">maria@email.co</p>
         <p>CARD USED</p>
         <p id="transformed-card">XXXX - XXXX - XXXX - ????</p>
       </div>
