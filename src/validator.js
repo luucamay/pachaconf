@@ -18,7 +18,8 @@ const validator = {
   },
 
   maskify: (creditCardNumber) => {
-    if (creditCardNumber.length < 4)
+    const n = creditCardNumber.length;
+    if (n < 4)
       return creditCardNumber;
     return '🐱'.repeat(n - 4) + creditCardNumber.slice(-4);
   }

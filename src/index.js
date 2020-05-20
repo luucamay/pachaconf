@@ -16,6 +16,13 @@ const partyTicketQuantity = document.getElementById("ticket-quantity-2");
 const agreeTermsConditions = document.getElementById("agreeTermsConditions");
 const totalBuy = document.getElementById("totalBuy")
 const totalCheckout = document.getElementById("totalCheckout")
+// Variables from checkoutView
+const firstName = document.getElementById("first-name");
+const email = document.getElementById("email");
+// Variables from thanksView
+const thanksName = document.getElementById("thanks-name");
+const thanksEmail = document.getElementById("thanks-email");
+const transformedCard = document.getElementById("transformed-card");
 
 const buyTickets = function () {
     homeView.classList.add("hide");
@@ -31,9 +38,19 @@ const checkout = function (evt) {
     }
 }
 
-const placeOrder = function () {
-    checkoutView.classList.add("hide");
-    thanksView.classList.remove("hide");
+const placeOrder = function (evt) {
+    evt.preventDefault();
+    // when card number is valid
+    const cardNumber = document.getElementById("card-number").value;
+    if (validator.isValid(cardNumber)) {
+        checkoutView.classList.add("hide");
+        thanksView.classList.remove("hide");
+        thanksName.textContent = firstName.value;
+        thanksEmail.textContent = email.value;
+        transformedCard.textContent = validator.maskify(cardNumber);
+    } else {
+        alert("card number not valid, try again");
+    }
 }
 
 const updateTotalPrice = function () {
