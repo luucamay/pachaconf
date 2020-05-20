@@ -10,17 +10,17 @@ This project is the event page for PachaConf where you can buy your tickets :)
 5. Image of final prototype
 
 ## TO DO
-- [ ] Rewrite luhn algorithm
-- [ ] Check tests
-- [x] Write tests
 - [ ] Change innerHTML for textContent when not html needed.
 - [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
-- [x] Validation form -> GET First Name, email, card encrypted.
+- [ ] La imagen final de tu proyecto.
 - [ ] Center some elements.
 - [ ] Enter Promo Code Interactivity.
+- [x] Rewrite luhn algorithm
+- [x] Check tests
+- [x] Write tests
+- [x] Validation form -> GET First Name, email, card encrypted.
 - [x] Un título con el nombre de tu proyecto.
 - [x] Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-- [ ] La imagen final de tu proyecto.
 - [ ] Investigación UX:
   - [x] Explicar quiénes son los usuarios y los objetivos en relación con el
     producto.
