@@ -34,7 +34,7 @@ const checkout = function (evt) {
     if (total > 0 && agreeTermsConditions.checked) {
         buyView.classList.add("hide");
         checkoutView.classList.remove("hide");
-        totalCheckout.innerHTML = '$ ' + total.toFixed(2);
+        totalCheckout.textContent = '$ ' + total.toFixed(2);
     }
 }
 
@@ -57,7 +57,7 @@ const updateTotalPrice = function () {
     total = 0.00
     total += generalTicketQuantity.value * 500;
     total += partyTicketQuantity.value * 100;
-    totalBuy.innerHTML = '$ ' + total.toFixed(2);
+    totalBuy.textContent = '$ ' + total.toFixed(2);
 }
 
 buyTicketsBtn.addEventListener("click", buyTickets);
