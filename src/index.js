@@ -18,8 +18,9 @@ const totalBuy = document.getElementById("totalBuy")
 const totalCheckout = document.getElementById("totalCheckout")
 // Variables from checkoutView
 const firstName = document.getElementById("first-name");
-const inputFirstName = document.getElementById("input-fname");
+const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
+const cemail = document.getElementById("cemail");
 // Variables from thanksView
 const thanksName = document.getElementById("thanks-name");
 const thanksEmail = document.getElementById("thanks-email");
@@ -68,6 +69,7 @@ const validateInput = (value) => {
     return '';
 }
 const checkRequired = (e) => {
+    // TODO check target type!!
     const currentElement = e.target;
     let errorMessageText = validateInput(currentElement.value);
     const errorMessageElement = currentElement.nextElementSibling;
@@ -88,3 +90,6 @@ generalTicketQuantity.addEventListener("change", updateTotalPrice);
 partyTicketQuantity.addEventListener("change", updateTotalPrice);
 // firstName.addEventListener("change", checkRequired);
 firstName.onblur = checkRequired;
+lastName.onblur = checkRequired;
+email.onblur = checkRequired;
+cemail.onblur = checkRequired;
