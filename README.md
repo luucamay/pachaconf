@@ -11,6 +11,14 @@ This project is the event page for PachaConf where you can buy your tickets :)
 
 ## TO DO
 - [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
+  - [ ] Validate Required fields is working?
+  - [ ] first name
+  - [ ] last name
+  - [ ] email
+  - [ ] confirm email must be equal to email
+  - [ ] card number
+  - [ ] exp date
+  - [ ] csv
 - [ ] La imagen final de tu proyecto.
 - [ ] Center some elements.
 - [ ] Enter Promo Code Interactivity.
