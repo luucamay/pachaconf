@@ -21,6 +21,9 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
 const cemail = document.getElementById("cemail");
+const cardNumber = document.getElementById("card-number");
+const expDate = document.getElementById("exp-date");
+const csv = document.getElementById("csv");
 // Variables from thanksView
 const thanksName = document.getElementById("thanks-name");
 const thanksEmail = document.getElementById("thanks-email");
@@ -43,7 +46,7 @@ const checkout = function (evt) {
 const placeOrder = function (evt) {
     evt.preventDefault();
     // when card number is valid
-    const cardNumber = document.getElementById("card-number").value;
+    cardNumber.value;
     if (validator.isValid(cardNumber)) {
         checkoutView.classList.add("hide");
         thanksView.classList.remove("hide");
@@ -93,3 +96,6 @@ firstName.onblur = checkRequired;
 lastName.onblur = checkRequired;
 email.onblur = checkRequired;
 cemail.onblur = checkRequired;
+cardNumber.onblur = checkRequired;
+expDate.onblur = checkRequired;
+csv.onblur = checkRequired;

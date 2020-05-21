@@ -150,8 +150,11 @@
           <h3>Payment Details</h3>
           <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16" pattern="[0-9]+"
             required>
-          <input type="text" id="expDate" name="expDate" placeholder="Exp Date*" required>
+          <p class="input-error hide"></p>
+          <input type="text" id="exp-date" name="expDate" placeholder="Exp Date*" required>
+          <p class="input-error hide"></p>
           <input type="text" id="csv" name="csv" placeholder="CSV*" maxlength="3" required>
+          <p class="input-error hide"></p>
         </section>
         <div>
           <p id="totalCheckout" style="display: inline;"></p>
