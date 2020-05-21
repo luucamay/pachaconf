@@ -10,11 +10,11 @@ This project is the event page for PachaConf where you can buy your tickets :)
 5. Image of final prototype
 
 ## TO DO
-- [ ] Change innerHTML for textContent when not html needed.
 - [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
 - [ ] La imagen final de tu proyecto.
 - [ ] Center some elements.
 - [ ] Enter Promo Code Interactivity.
+- [x] Change innerHTML for textContent when not html needed.
 - [x] Rewrite luhn algorithm
 - [x] Check tests
 - [x] Write tests
