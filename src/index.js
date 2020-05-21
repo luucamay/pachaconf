@@ -18,6 +18,7 @@ const totalBuy = document.getElementById("totalBuy")
 const totalCheckout = document.getElementById("totalCheckout")
 // Variables from checkoutView
 const firstName = document.getElementById("first-name");
+const inputFirstName = document.getElementById("input-fname");
 const email = document.getElementById("email");
 // Variables from thanksView
 const thanksName = document.getElementById("thanks-name");
@@ -59,9 +60,18 @@ const updateTotalPrice = function () {
     total += partyTicketQuantity.value * 100;
     totalBuy.textContent = '$ ' + total.toFixed(2);
 }
+const checkRequired = (e) => {
+    const currentElement = e.target;
+    const errorMessage = currentElement.nextElementSibling;
+    currentElement.classList.add('required');
+    errorMessage.classList.remove('hide');
+
+}
 
 buyTicketsBtn.addEventListener("click", buyTickets);
 checkoutBtn.addEventListener("click", checkout);
 placeOrderBtn.addEventListener("click", placeOrder);
 generalTicketQuantity.addEventListener("change", updateTotalPrice);
 partyTicketQuantity.addEventListener("change", updateTotalPrice);
+// firstName.addEventListener("change", checkRequired);
+firstName.onblur = checkRequired;

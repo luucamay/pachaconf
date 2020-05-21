@@ -13,7 +13,7 @@
   <hr style="clear: both;">
   <main>
     <!--- Home View -->
-    <section id="homeView" class="">
+    <section id="homeView" class="hide">
       <h1>PACHA CONF</h1>
       <h2>LAST VIRTUAL CONFERENCE ON EARTH?</h2>
       <h2>April 23rd 2020</h2>
@@ -44,7 +44,7 @@
       </div>
       <hr style="clear: both;">
       <h3>PachaConf News and Updates</h3>
-      <input type="email" id="" placeholder="Enter your email..."><br><br>
+      <input type="email" id="" placeholder="Enter your email...">
       <button>GET UPDATES</button>
       <hr style="clear: both;">
       <h2>SCHEDUALE</h2>
@@ -131,36 +131,24 @@
       </form>
     </section>
     <!-- Checkout View -->
-    <section id="checkoutView" class="hide">
+    <section id="checkoutView" class="">
       <form>
         <!-- personal info card-->
         <section id="personalInfoCard" class="boxed">
           <h3>Personal Information</h3>
-          <ul>
-            <li>
-              <input type="text" id="first-name" name="first_name" placeholder="First Name">
-              <input type="text" id="last-name" name="last_name" placeholder="Last Name">
-            </li>
-            <li>
-              <input type="email" id="email" name="user_email" placeholder="Email">
-            </li>
-            <li>
-              <input type="email" id="cemail" name="confirm_email" placeholder="Confirm email">
-            </li>
-          </ul>
+          <input type="text" id="first-name" name="first_name" placeholder="First Name">
+          <p class="input-error hide">First name is required</p>
+          <input type="text" id="last-name" name="last_name" placeholder="Last Name">
+          <input type="email" id="email" name="user_email" placeholder="Email">
+          <input type="email" id="cemail" name="confirm_email" placeholder="Confirm email">
+
         </section>
         <section id="paymentDetails" class="boxed">
           <h3>Payment Details</h3>
-          <ul>
-            <li>
-              <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16"
-                pattern="[0-9]+" required>
-            </li>
-            <li>
-              <input type="text" id="expDate" name="expDate" placeholder="Exp Date*" required>
-              <input type="text" id="csv" name="csv" placeholder="CSV*" maxlength="3" required>
-            </li>
-          </ul>
+          <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16" pattern="[0-9]+"
+            required>
+          <input type="text" id="expDate" name="expDate" placeholder="Exp Date*" required>
+          <input type="text" id="csv" name="csv" placeholder="CSV*" maxlength="3" required>
         </section>
         <div>
           <p id="totalCheckout" style="display: inline;"></p>

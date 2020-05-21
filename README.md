@@ -13,6 +13,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
 - [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
   - [ ] Validate Required fields is working?
   - [ ] first name
+    - [ ] on change 
   - [ ] last name
   - [ ] email
   - [ ] confirm email must be equal to email
@@ -20,6 +21,8 @@ This project is the event page for PachaConf where you can buy your tickets :)
   - [ ] exp date
   - [ ] csv
 - [ ] La imagen final de tu proyecto.
+- [ ] Change double quotes for single quotes in JS.
+- [ ] Change functions by arrow functions
 - [ ] Center some elements.
 - [ ] Enter Promo Code Interactivity.
 - [x] Change innerHTML for textContent when not html needed.
@@ -40,6 +43,8 @@ This project is the event page for PachaConf where you can buy your tickets :)
 
 ## Questions to Lupo/Mariano
 - Is the luhn algorithm well explained? I think the image (spacially the arroy) confuses the developer.
+- Should I have used labels instead of paragraphs after inputs?
+- Should I use onblur by default vs addEventListener with the event blur?
 
 ## Topics to check
 - Is it responsive?
