@@ -60,12 +60,25 @@ const updateTotalPrice = function () {
     total += partyTicketQuantity.value * 100;
     totalBuy.textContent = '$ ' + total.toFixed(2);
 }
+
+const validateInput = (value) => {
+    if (value === '') {
+        return 'is required';
+    }
+    return '';
+}
 const checkRequired = (e) => {
     const currentElement = e.target;
-    const errorMessage = currentElement.nextElementSibling;
-    currentElement.classList.add('required');
-    errorMessage.classList.remove('hide');
-
+    let errorMessageText = validateInput(currentElement.value);
+    const errorMessageElement = currentElement.nextElementSibling;
+    if (errorMessageText === '') {
+        currentElement.classList.remove('required');
+        errorMessageElement.classList.add('hide');
+    } else {
+        currentElement.classList.add('required');
+        errorMessageElement.classList.remove('hide');
+        errorMessageElement.textContent = `${currentElement.placeholder} ${errorMessageText}`;
+    }
 }
 
 buyTicketsBtn.addEventListener("click", buyTickets);
