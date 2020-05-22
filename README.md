@@ -21,10 +21,10 @@ This project is the event page for PachaConf where you can buy your tickets for 
 
 # Objetivos de aprendizaje
 * ✅ Organizar tu tiempo y priorizar tareas en un entorno de
-*   **alta incertidumbre**.
+   **alta incertidumbre**.
 * ✅ Entender las **necesidades del usuario** y cómo proponer una solución.
 * ✅ Entender la importancia del proceso de prototipado durante la creación de un
-*   producto digital.
+   producto digital.
 * ❌ Conocer los principios básicos del diseño visual.
 * ✅ Utilizar etiquetas semánticas de HTML y elementos de formulario.
 * ✅ Mostrar elementos de formulario en la pantalla usando **HTML** y **CSS**.
@@ -32,18 +32,18 @@ This project is the event page for PachaConf where you can buy your tickets for 
 * ❌ Utilizar el modelo de cajas de CSS (border, margin, padding).
 * ❌ Definir reglas de estilo en CSS.
 * ✅ Permitir al usuario interactuar con elementos del DOM y hacer que la
-*   aplicación responda cuando ocurran esos **eventos del DOM**.
+   aplicación responda cuando ocurran esos **eventos del DOM**.
 * ✅ Manipular _**strings**_ (cadenas de texto).
 * ✅ Usar **control de flujo** (bucles, condicionales, ...).
 * ✅ Actualizar la pantalla con los resultados (**manipular el DOM**) a través de
-*   **innerHTML** o **textContent**.
+   **innerHTML** o **textContent**.
 * ✅ **Implementar funciones** dada una descripción de su comportamiento.
 * ✅ Verificar que tus funciones hagan las cosas para las que fueron creadas
-*   (**pruebas unitarias (_unit tests_) con [Jest](https://jestjs.io/es-ES/)**).
+   (**pruebas unitarias (_unit tests_) con [Jest](https://jestjs.io/es-ES/)**).
 * ✅ Configurar tu cuenta de git.
 * ✅ Hacer _fork_ y _clonar_ el repositorio del proyecto.
 * ✅ Mantener actualizado los cambios en tu repositorio remoto
-*   (commit, pull, push).
+   (commit, pull, push).
 * ✅ Desplegar tu proyecto en [GitHub Pages](https://pages.github.com).
 
 
