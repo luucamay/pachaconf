@@ -127,6 +127,7 @@ const placeOrder = function (evt) {
     evt.preventDefault();
     // check all inputs are validated
     const errors = ['', '', '', '', '', ''];
+    allInputsValidPlaceOrder = true;
     errors[0] = getFieldError(firstName);
     errors[1] = getFieldError(lastName);
     errors[2] = getEmailError(email);
