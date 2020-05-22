@@ -14,7 +14,6 @@ const placeOrderBtn = document.getElementById('place-order');
 const checkoutBtn = document.getElementById('checkout');
 const generalTicketQuantity = document.getElementById('ticket-quantity-1');
 const partyTicketQuantity = document.getElementById('ticket-quantity-2');
-const agreeTermsConditions = document.getElementById('agree-terms-conditions');
 const totalBuy = document.getElementById('total-buy')
 const totalCheckout = document.getElementById('total-checkout')
 // Variables from checkoutView
@@ -36,7 +35,7 @@ const buyTickets = () => {
 
 const checkout = (evt) => {
     evt.preventDefault();
-    if (total > 0 && agreeTermsConditions.checked) {
+    if (total > 0) {
         buyView.classList.add('hide');
         checkoutView.classList.remove('hide');
         totalCheckout.textContent = '$ ' + total.toFixed(2);
