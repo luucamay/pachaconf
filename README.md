@@ -23,7 +23,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
 - [ ] La imagen final de tu proyecto.
 - [x] Change double quotes for single quotes in JS.
 - [x] HTML change camelCase to -Case
-- [ ] Change functions by arrow functions
+- [x] Change functions by arrow functions
 - [ ] Center some elements.
 - [ ] Enter Promo Code Interactivity.
 - [x] Change innerHTML for textContent when not html needed.
