@@ -73,7 +73,7 @@
 
     </section>
     <!--- Buy Ticket View -->
-    <section id="buy-view" class="hide">
+    <section id="buy-view" class="">
       <form>
         <div class="ticket-card">
           <h3 id="type1">General Ticket</h3>
@@ -120,7 +120,7 @@
       </form>
     </section>
     <!-- Checkout View -->
-    <section id="checkout-view" class="">
+    <section id="checkout-view" class="hide">
       <form>
         <!-- personal info card-->
         <section id="personalInfoCard" class="container-info">
@@ -151,17 +151,12 @@
     </section>
     <!-- Thanks View -->
     <section id="thanks-view" class="hide">
-      <div class="boxed">
-        <svg class="checkmark" viewbox="0 0 52 52">
-          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
-        <h3>Thanks for your order <strong id="thanks-name">NAME HERE</strong></h3>
-      </div>
-      <div class="boxed">
-        <h1>YOU WILL BE PART OF PACHA CONF</h1>
-        <p>Thank you very much for supporting this event and wanting so hard to join!</p>
-      </div>
-      <div class="boxed" id="ticket-info">
+      <svg class="checkmark" viewbox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+      <h3>Thanks for your order <strong id="thanks-name">NAME HERE</strong></h3>
+      <h1>YOU WILL BE PART OF PACHA CONF</h1>
+      <div id="ticket-info">
         <p>1 Ticket sent to:</p>
         <p id="thanks-email">maria@email.co</p>
         <p>CARD USED</p>
