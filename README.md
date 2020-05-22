@@ -1,6 +1,6 @@
 # PachaConf
 
-This project is the event page for PachaConf where you can buy your tickets :)
+This project is the event page for PachaConf where you can buy your tickets for the online conference :)
 
 # Investigacion UX
 1. Users of this project are enviromental activists who want to attend a global conference in order to celebrate the international day of planet earth.
@@ -8,6 +8,17 @@ This project is the event page for PachaConf where you can buy your tickets :)
 3. First prototype
 4. Feedback I have gotten
 5. Image of final prototype
+
+## Here are my first sketches for this project
+<img src="./sketches/0firstLowFidelitySketch.jpg" alt="First sketches of the project" width="600" />
+<img src="./sketches/firstLowFidelitySketch.jpg" alt="First sketches for the project" width="600" />
+
+## This is the final low fidelity sketch for this project
+<img src="./sketches/finalLowFidelitySketch.jpg" alt="This is the final sketch for this project" width="600" />
+
+## Final image of my project - high fidelity
+<img src="./sketches/" alt="Sketch created in figma showing 3 main screens" width ="600" />
+
 
 ## TO DO
 - [x] Check before submit if all fields are correct
@@ -20,7 +31,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
   - [x] card number
   - [x] exp date
   - [x] csv
-- [ ] La imagen final de tu proyecto.
+- [x] La imagen final de tu proyecto.
 - [x] Change double quotes for single quotes in JS.
 - [x] HTML change camelCase to -Case
 - [x] Change functions by arrow functions
@@ -33,13 +44,13 @@ This project is the event page for PachaConf where you can buy your tickets :)
 - [x] Validation form -> GET First Name, email, card encrypted.
 - [x] Un título con el nombre de tu proyecto.
 - [x] Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-- [ ] Investigación UX:
+- [x] Investigación UX:
   - [x] Explicar quiénes son los usuarios y los objetivos en relación con el
     producto.
   - [x] Explicar cómo el producto soluciona los problemas/necesidades de dichos
     usuarios.
-  - [ ] Luego colocarás la foto de tu primer prototipo en papel.
-  - [ ] Agregar un resumen del feedback recibido indicando las mejoras a realizar.
+  - [x] Luego colocarás la foto de tu primer prototipo en papel.
+  - [x] Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   - [x] Imagen del prototipo final.
 
 ## Questions to Lupo/Mariano
