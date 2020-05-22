@@ -41,7 +41,7 @@ header {
   width: 100%;
 }
 header > * {
-  padding: 8px 8px;
+  padding: 8px;
 }
 header h1 {
   font-size: 1em;
@@ -53,11 +53,12 @@ header h2 {
 
 header button {
   background-color: var(--primary-color);
-  border: none;
+  border-radius: 0;
   font-size: 1.5em;
-  height: 100%;
   width: 50px;
-  padding: 0;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  height: 100%;
 }
 
 header > a {
@@ -126,7 +127,6 @@ main {
 
 button {
   background-color: var(--primary-color);
-  border: none;
   border-radius: 8px;
   padding: 1em;
   font-weight: bold;
