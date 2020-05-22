@@ -10,16 +10,16 @@ This project is the event page for PachaConf where you can buy your tickets :)
 5. Image of final prototype
 
 ## TO DO
-- [ ] Check if inputs on the checkout view are filled, they are REQUIRED.
-  - [ ] Validate Required fields is working?
-  - [ ] first name
-    - [ ] on change 
-  - [ ] last name
-  - [ ] email
-  - [ ] confirm email must be equal to email
-  - [ ] card number
-  - [ ] exp date
-  - [ ] csv
+- [ ] Check before submit if all fields are correct
+- [x] Check if inputs on the checkout view are filled, they are REQUIRED.
+  - [x] Validate Required fields is working?
+  - [x] first name
+  - [x] last name
+  - [x] email
+  - [x] confirm email must be equal to email
+  - [x] card number
+  - [x] exp date
+  - [x] csv
 - [ ] La imagen final de tu proyecto.
 - [ ] Change double quotes for single quotes in JS.
 - [ ] Change functions by arrow functions

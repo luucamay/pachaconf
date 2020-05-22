@@ -1,7 +1,7 @@
 import validator from './validator.js';
 
-// console.log(validator.isValid('4137894711755904'));
 let total = 0.00;
+let allInputsValidPlaceOrder = true;
 
 const homeView = document.getElementById("homeView");
 const checkoutView = document.getElementById("checkoutView");
@@ -42,21 +42,6 @@ const checkout = function (evt) {
     }
 }
 
-const placeOrder = function (evt) {
-    evt.preventDefault();
-    // when card number is valid
-    cardNumber.value;
-    if (validator.isValid(cardNumber)) {
-        checkoutView.classList.add("hide");
-        thanksView.classList.remove("hide");
-        thanksName.textContent = firstName.value;
-        thanksEmail.textContent = email.value;
-        transformedCard.textContent = validator.maskify(cardNumber);
-    } else {
-        alert("card number not valid, try again");
-    }
-}
-
 const updateTotalPrice = function () {
     total = 0.00
     total += generalTicketQuantity.value * 500;
@@ -64,17 +49,21 @@ const updateTotalPrice = function () {
     totalBuy.textContent = '$ ' + total.toFixed(2);
 }
 
-const onBlur = (e, errorText) => {
-    const currentElement = e.target;
-    const errorMessageElement = currentElement.nextElementSibling;
+const showErrorMessage = (element, errorText) => {
+    const errorMessageElement = element.nextElementSibling;
     errorMessageElement.textContent = errorText;
     if (errorText === '') {
-        currentElement.classList.remove('required');
+        element.classList.remove('required');
         errorMessageElement.classList.add('hide');
     } else {
-        currentElement.classList.add('required');
+        element.classList.add('required');
         errorMessageElement.classList.remove('hide');
     }
+}
+
+const onBlur = (e, errorText) => {
+    const currentElement = e.target;
+    showErrorMessage(currentElement, errorText);
 }
 
 const inputEmpty = (value) => {
@@ -84,51 +73,81 @@ const inputEmpty = (value) => {
     return false;
 }
 
-const getEmailError = (e) => {
-    const currentElement = e.target;
-    const inputValue = currentElement.value;
+const getEmailError = (element) => {
+    const inputValue = element.value;
     if (inputEmpty(inputValue)) {
+        allInputsValidPlaceOrder = false;
         return 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(inputValue)) {
+        allInputsValidPlaceOrder = false;
         return 'Email is not valid';
     }
     return '';
 }
 
-const getFieldError = (e) => {
-    const currentElement = e.target;
-    const inputValue = currentElement.value;
+const getFieldError = (element) => {
+    const inputValue = element.value;
     if (inputEmpty(inputValue)) {
-        return `${currentElement.placeholder} is required`;
+        allInputsValidPlaceOrder = false;
+        return `${element.placeholder} is required`;
     }
     return '';
 }
 
-const getCardError = (e) => {
-    const currentElement = e.target;
-    const inputValue = currentElement.value;
+const getCardError = (element) => {
+    const inputValue = element.value;
     if (inputEmpty(inputValue)) {
+        allInputsValidPlaceOrder = false;
         return 'Card is required';
     } else if (/[^0-9]/.test(inputValue)) {
+        allInputsValidPlaceOrder = false;
         return 'Fill out with only digits [0-9]';
-    } else if (!validator.isValid(inputValue)){
+    } else if (!validator.isValid(inputValue)) {
+        allInputsValidPlaceOrder = false;
         return 'Card number is not valid';
     }
     return '';
 }
 const onBlurField = (e) => {
-    const errorText = getFieldError(e);
+    const errorText = getFieldError(e.target);
     onBlur(e, errorText);
 }
 
 const onBlurEmail = (e) => {
-    const errorText = getEmailError(e);
+    const errorText = getEmailError(e.target);
     onBlur(e, errorText);
 }
 
 const onBlurCard = (e) => {
-    const errorText = getCardError(e);
+    const errorText = getCardError(e.target);
     onBlur(e, errorText);
+}
+
+const placeOrder = function (evt) {
+    evt.preventDefault();
+    // check all inputs are validated
+    const errors = ['', '', '', '', '', ''];
+    errors[0] = getFieldError(firstName);
+    errors[1] = getFieldError(lastName);
+    errors[2] = getEmailError(email);
+    errors[3] = getCardError(cardNumber);
+    errors[4] = getFieldError(expDate);
+    errors[5] = getFieldError(csv);
+
+    if (allInputsValidPlaceOrder) {
+        checkoutView.classList.add("hide");
+        thanksView.classList.remove("hide");
+        thanksName.textContent = firstName.value;
+        thanksEmail.textContent = email.value;
+        transformedCard.textContent = validator.maskify(cardNumber.value);
+    } else {
+        showErrorMessage(firstName, errors[0]);
+        showErrorMessage(lastName, errors[1]);
+        showErrorMessage(email, errors[2]);
+        showErrorMessage(cardNumber, errors[3]);
+        showErrorMessage(expDate, errors[4]);
+        showErrorMessage(csv, errors[5]);
+    }
 }
 
 buyTicketsBtn.addEventListener("click", buyTickets);
