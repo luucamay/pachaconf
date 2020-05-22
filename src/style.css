@@ -121,6 +121,16 @@ button {
   font-size: 1.5em;
   width: 50%;
 }
+
+.container-info {
+  padding: 16px 0;
+  display: grid;
+}
+.container-info input {
+  width: 100%;
+  height: 2em;
+  margin: 8px 0;
+}
 /* Nice to have: put the input after change text color red 
 input:required::placeholder{
   color: red;

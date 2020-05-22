@@ -45,7 +45,6 @@
           <p>SEC</p>
         </div>
       </div>
-      <hr style="clear: both;">
       <h3>PachaConf News and Updates</h3>
       <input type="email" id="" placeholder="Enter your email...">
       <button>GET UPDATES</button>
@@ -74,7 +73,7 @@
 
     </section>
     <!--- Buy Ticket View -->
-    <section id="buy-view" class="">
+    <section id="buy-view" class="hide">
       <form>
         <div class="ticket-card">
           <h3 id="type1">General Ticket</h3>
@@ -121,10 +120,10 @@
       </form>
     </section>
     <!-- Checkout View -->
-    <section id="checkout-view" class="hide">
+    <section id="checkout-view" class="">
       <form>
         <!-- personal info card-->
-        <section id="personalInfoCard" class="boxed">
+        <section id="personalInfoCard" class="container-info">
           <h3>Personal Information</h3>
           <input type="text" id="first-name" name="first_name" placeholder="First Name*" required>
           <p class="input-error hide"></p>
@@ -134,7 +133,7 @@
           <p class="input-error hide"></p>
 
         </section>
-        <section id="paymentDetails" class="boxed">
+        <section id="paymentDetails" class="container-info">
           <h3>Payment Details</h3>
           <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16" pattern="[0-9]+"
             required>
@@ -145,7 +144,7 @@
           <p class="input-error hide"></p>
         </section>
         <div class="total">
-          <p id="total-checkout" style="display: inline;"></p>
+          <p id="total-checkout"></p>
           <button id="place-order">Place Order</button>
         </div>
       </form>
