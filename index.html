@@ -9,132 +9,75 @@
 </head>
 
 <body>
-  <header>Apr 23rd 2020</header>
-  <hr style="clear: both;">
+  <header>
+    <h1>Pacha<br>Conf</h1>
+    <h2>Apr 23rd 2020</h2>
+    <button>x</button>
+  </header>
   <main>
     <!--- Home View -->
-    <section id="home-view" class="hide">
-      <h1>PACHA CONF</h1>
-      <h2>LAST VIRTUAL CONFERENCE ON EARTH?</h2>
-      <h2>April 23rd 2020</h2>
-      <button id="buy-tickets">Buy Tickets</button>
-      <button>Schedule ❤️ </button>
-      <button>Sponsor PachaConf</button>
-      <p>Spread the world</p>
-      <p>Save the date</p>
-      <p>Dates and times subject to change</p>
-      <hr style="clear: both;">
-      <div>
-        <div style="float: left;">
-          <p>12</p>
-          <p>DAYS</p>
-        </div>
-        <div style="float: left;">
-          <p>3</p>
-          <p>HOURS</p>
-        </div>
-        <div style="float: left;">
-          <p>45</p>
-          <p>MIN</p>
-        </div>
-        <div style="float: left;">
-          <p>23</p>
-          <p>SEC</p>
-        </div>
+    <section id="home-view" class="">
+      <div class="container">
+        <h1>PACHA CONF</h1>
+        <h2>LAST VIRTUAL CONFERENCE ON EARTH?</h2>
+        <h2>April 23rd 2020</h2>
+        <button id="buy-tickets">Buy Tickets</button>
+        <button>Schedule ❤️ </button>
+        <button>Sponsor PachaConf</button>
       </div>
-      <hr style="clear: both;">
-      <h3>PachaConf News and Updates</h3>
-      <input type="email" id="" placeholder="Enter your email...">
-      <button>GET UPDATES</button>
-      <hr style="clear: both;">
-      <h2>SCHEDUALE</h2>
-      <div class="talk-card boxed">
-        <p class="boxed">9:00 AM - 9:20 AM</p>
-        <p>This is the title of the first talk</p>
-        <p>This is the speaker name</p>
-      </div>
-      <div class="talk-card boxed">
-        <p class="boxed">9:00 AM - 9:20 AM</p>
-        <p>This is the title of the first talk</p>
-        <p>This is the speaker name</p>
-      </div>
-      <div class="talk-card boxed">
-        <p class="boxed">9:00 AM - 9:20 AM</p>
-        <p>This is the title of the first talk</p>
-        <p>This is the speaker name</p>
-      </div>
-      <div class="talk-card boxed">
-        <p class="boxed">9:00 AM - 9:20 AM</p>
-        <p>This is the title of the first talk</p>
-        <p>This is the speaker name</p>
-      </div>
-
     </section>
     <!--- Buy Ticket View -->
     <section id="buy-view" class="hide">
       <form>
-        <a href="#">Enter Promo Code</a>
         <div class="ticket-card">
-          <div style="float: left;">
-            <h3>General Ticket</h3>
-            <p>$ 500.00</p>
-          </div>
-          <div>
-            <select id="ticket-quantity-1">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-          </div>
-          <div style="clear: both;">
-            <span>Access to all virtual conferences</span>
-          </div>
-          <hr>
+          <h3 id="type1">General Ticket</h3>
+          <p id="price1">$ 500.00</p>
+          <select id="ticket-quantity-1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <p id="details1">Access to all virtual conferences</p>
         </div>
-        <div class="ticket-card" style="clear: both;">
-          <div style="float: left;">
-            <h3>After Online Party</h3>
-            <p>$ 100.00</p>
-          </div>
-          <div>
-            <select id="ticket-quantity-2">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-          </div>
-          <div style="clear: both;">
-            <span>Connect to different virtual rooms to Party</span>
-          </div>
-          <hr>
+        <div class="ticket-card">
+          <h3 id="type2">After Online Party</h3>
+          <p id="price1">$ 100.00</p>
+          <select id="ticket-quantity-2">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <p id="details1">Connect to different virtual rooms to Party</p>
         </div>
         <input type="checkbox" id="agree-terms-conditions" required>
         <label for="agreeTermsConditions"> I agree to terms and conditions</label>
-        <p id="total-buy" style="display: inline;">$ 0.00</p>
-        <button id="checkout">Checkout</button>
+        <div class="total">
+          <p id="total-buy">$ 0.00</p>
+          <button id="checkout">Checkout</button>
+        </div>
       </form>
     </section>
     <!-- Checkout View -->
-    <section id="checkout-view" class="">
+    <section id="checkout-view" class="hide">
       <form>
         <!-- personal info card-->
-        <section id="personalInfoCard" class="boxed">
+        <section id="personalInfoCard" class="container-info">
           <h3>Personal Information</h3>
           <input type="text" id="first-name" name="first_name" placeholder="First Name*" required>
           <p class="input-error hide"></p>
@@ -144,7 +87,7 @@
           <p class="input-error hide"></p>
 
         </section>
-        <section id="paymentDetails" class="boxed">
+        <section id="paymentDetails" class="container-info">
           <h3>Payment Details</h3>
           <input type="text" id="card-number" name="Number" placeholder="Cardi Number*" maxlength="16" pattern="[0-9]+"
             required>
@@ -154,25 +97,20 @@
           <input type="text" id="csv" name="csv" placeholder="CSV*" minlength="3" maxlength="3" required>
           <p class="input-error hide"></p>
         </section>
-        <div>
-          <p id="total-checkout" style="display: inline;"></p>
+        <div class="total">
+          <p id="total-checkout"></p>
           <button id="place-order">Place Order</button>
         </div>
       </form>
     </section>
     <!-- Thanks View -->
     <section id="thanks-view" class="hide">
-      <div class="boxed">
-        <svg class="checkmark" viewbox="0 0 52 52">
-          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
-        <h3>Thanks for your order <strong id="thanks-name">NAME HERE</strong></h3>
-      </div>
-      <div class="boxed">
-        <h1>YOU WILL BE PART OF PACHA CONF</h1>
-        <p>Thank you very much for supporting this event and wanting so hard to join!</p>
-      </div>
-      <div class="boxed" id="ticket-info">
+      <svg class="checkmark" viewbox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+      <h3>Thanks for your order <strong id="thanks-name">NAME HERE</strong></h3>
+      <h1>YOU WILL BE PART OF PACHA CONF</h1>
+      <div id="ticket-info">
         <p>1 Ticket sent to:</p>
         <p id="thanks-email">maria@email.co</p>
         <p>CARD USED</p>
@@ -180,12 +118,8 @@
       </div>
     </section>
   </main>
-  <footer style="clear: both;">
-    <hr style="clear: both;">
-    <p>This is a logo</p>
-    <p>April 23rd 2020</p>
-    <p>Follow us</p>
-    <p>More links...</p>
+  <footer>
+    <p>Created with 🧡 by @luucamay</p>
   </footer>
   <script src="index.js" type="module"></script>
 </body>
