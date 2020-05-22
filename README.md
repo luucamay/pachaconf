@@ -17,7 +17,7 @@ This project is the event page for PachaConf where you can buy your tickets for 
 <img src="./sketches/finalLowFidelitySketch.jpg" alt="This is the final sketch for this project" width="600" />
 
 ## Final image of my project - high fidelity
-<img src="./sketches/" alt="Sketch created in figma showing 3 main screens" width ="600" />
+<img src="./sketches/HightFidelitySketch.png" alt="Sketch created in figma showing 3 main screens" width ="600" />
 
 
 ## TO DO
