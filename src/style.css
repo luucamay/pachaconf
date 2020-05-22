@@ -1,9 +1,5 @@
 @import "./variables.css";
 
-.boxed {
-  border-bottom: 1px solid red;
-}
-
 .hide {
   display: none;
 }
@@ -18,8 +14,7 @@
 body {
   display: grid;
   height: 100vh;
-  grid-template-rows:
-    50px 3fr auto;
+  grid-template-rows: 50px 3fr auto;
   grid-template-areas:
     "hd"
     "main"
@@ -42,7 +37,7 @@ header {
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 }
 
 header h1 {
@@ -65,7 +60,7 @@ footer {
   background-color: var(--primary-color);
   grid-area: ft;
   text-align: center;
-  padding: 16px; 
+  padding: 16px;
   height: 50px;
 }
 
@@ -73,8 +68,37 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 8px;
 }
+
+.ticket-card {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "type quantity"
+  "price quantity"
+  "details details";
+}
+
+#type1, #type2 {
+  grid-area: type;
+}
+
+#price1, #price2 {
+  grid-area: price;
+  font-weight: bold;
+}
+
+#ticket-quantity-1, #ticket-quantity-2 {
+  grid-area: quantity;
+}
+
+#details1, #details2 {
+  grid-area: details;
+}
+
 /* Nice to have: put the input after change text color red 
 input:required::placeholder{
   color: red;
