@@ -22,15 +22,15 @@ This project is the event page for PachaConf where you can buy your tickets for 
 # Objetivos de aprendizaje
 * ✅ Organizar tu tiempo y priorizar tareas en un entorno de
    **alta incertidumbre**.
-* ✅ Entender las **necesidades del usuario** y cómo proponer una solución.
+* ❌ Entender las **necesidades del usuario** y cómo proponer una solución.
 * ✅ Entender la importancia del proceso de prototipado durante la creación de un
    producto digital.
 * ❌ Conocer los principios básicos del diseño visual.
 * ✅ Utilizar etiquetas semánticas de HTML y elementos de formulario.
 * ✅ Mostrar elementos de formulario en la pantalla usando **HTML** y **CSS**.
-* ❌ Utilizar diversos tipos de selectores en CSS: de elemento, de clase, de id.
-* ❌ Utilizar el modelo de cajas de CSS (border, margin, padding).
-* ❌ Definir reglas de estilo en CSS.
+* ✅ Utilizar diversos tipos de selectores en CSS: de elemento, de clase, de id.
+* ✅ Utilizar el modelo de cajas de CSS (border, margin, padding).
+* ✅ Definir reglas de estilo en CSS.
 * ✅ Permitir al usuario interactuar con elementos del DOM y hacer que la
    aplicación responda cuando ocurran esos **eventos del DOM**.
 * ✅ Manipular _**strings**_ (cadenas de texto).
