@@ -28,12 +28,12 @@ const thanksName = document.getElementById('thanks-name');
 const thanksEmail = document.getElementById('thanks-email');
 const transformedCard = document.getElementById('transformed-card');
 
-const buyTickets = function () {
+const buyTickets = () => {
     homeView.classList.add('hide');
     buyView.classList.remove('hide');
 }
 
-const checkout = function (evt) {
+const checkout = (evt) => {
     evt.preventDefault();
     if (total > 0 && agreeTermsConditions.checked) {
         buyView.classList.add('hide');
@@ -42,7 +42,7 @@ const checkout = function (evt) {
     }
 }
 
-const updateTotalPrice = function () {
+const updateTotalPrice = () => {
     total = 0.00
     total += generalTicketQuantity.value * 500;
     total += partyTicketQuantity.value * 100;
@@ -123,7 +123,7 @@ const onBlurCard = (e) => {
     onBlur(e, errorText);
 }
 
-const placeOrder = function (evt) {
+const placeOrder = (evt) => {
     evt.preventDefault();
     // check all inputs are validated
     const errors = ['', '', '', '', '', ''];
