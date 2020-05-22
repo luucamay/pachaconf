@@ -115,4 +115,4 @@ This project is the event page for PachaConf where you can buy your tickets for 
 - onblur is for when something is out of focus
 
 ## Test with credit cards generated
-bestccgen.com/bulkcardgenerator-result.php?network=visa&noc=20
+https://www.bestccgen.com/bulkcardgenerator-result.php
