@@ -68,11 +68,11 @@ main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 16px;
 }
 
 .ticket-card {
-  padding: 8px;
+  padding: 8px 0;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(3, 1fr);
@@ -99,6 +99,27 @@ main {
   grid-area: details;
 }
 
+.checkout {
+  border-top: solid var(--black-soft);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  padding: 1em;
+  font-weight: bold;
+  width: 50%;
+}
+
+.checkout > p {
+  font: bold;
+  font-size: 1.5em;
+  width: 50%;
+}
 /* Nice to have: put the input after change text color red 
 input:required::placeholder{
   color: red;
