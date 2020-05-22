@@ -59,6 +59,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
 - JS events https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events (onclick vs addeventlistener)
 - Why do they not use this keyword, why is not allowed in laboratoria?
 - BIND concept in JS https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
+- Create supper inputs? Like texts that get smaller and then are bigger
 
 ## New things learned
 - Clear the float whenever you need to get a new line after a float:left
@@ -72,6 +73,7 @@ This project is the event page for PachaConf where you can buy your tickets :)
 - HTML5 discourages the use of type=text/javascript https://stackoverflow.com/questions/51418964/script-type-text-javascript-vs-script-type-module
 - onclick is a bad practice https://www.simonewebdesign.it/onclick-vs-addeventlistener/
 - repeat and slice methods for strings!
+- onblur is for when something is out of focus
 
 ## Test with credit cards generated
 bestccgen.com/bulkcardgenerator-result.php?network=visa&noc=20

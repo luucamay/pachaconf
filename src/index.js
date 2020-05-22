@@ -65,16 +65,18 @@ const updateTotalPrice = function () {
     totalBuy.textContent = '$ ' + total.toFixed(2);
 }
 
-const validateInput = (value) => {
+const inputEmpty = (value) => {
     if (value === '') {
-        return 'is required';
+        return true;
     }
-    return '';
+    return false;
 }
 const checkRequired = (e) => {
     // TODO check target type!!
+    console.log('you left this input');
+    return 0;
     const currentElement = e.target;
-    let errorMessageText = validateInput(currentElement.value);
+    let errorMessageText = inputEmpty(currentElement.value);
     const errorMessageElement = currentElement.nextElementSibling;
     if (errorMessageText === '') {
         currentElement.classList.remove('required');
@@ -86,6 +88,31 @@ const checkRequired = (e) => {
     }
 }
 
+const getEmailError = (e) => {
+    const currentElement = e.target;
+    const inputValue = currentElement.value;
+    if (inputEmpty(inputValue)){
+        return 'Email is required';
+    } else if(!/\S+@\S+\.\S+/.test(inputValue)){
+        return 'Email is not valid';
+    }
+    return '';
+}
+
+const onBlurEmail = (e) => {
+    const errorText = getEmailError(e);
+    const currentElement = e.target;
+    const errorMessageElement = currentElement.nextElementSibling;
+    errorMessageElement.textContent = errorText;
+    if (errorText === ''){
+        currentElement.classList.remove('required');
+        errorMessageElement.classList.add('hide');
+    } else {
+        currentElement.classList.add('required');
+        errorMessageElement.classList.remove('hide');
+    }
+}
+
 buyTicketsBtn.addEventListener("click", buyTickets);
 checkoutBtn.addEventListener("click", checkout);
 placeOrderBtn.addEventListener("click", placeOrder);
@@ -94,7 +121,7 @@ partyTicketQuantity.addEventListener("change", updateTotalPrice);
 // firstName.addEventListener("change", checkRequired);
 firstName.onblur = checkRequired;
 lastName.onblur = checkRequired;
-email.onblur = checkRequired;
+email.onblur = onBlurEmail;
 cemail.onblur = checkRequired;
 cardNumber.onblur = checkRequired;
 expDate.onblur = checkRequired;
