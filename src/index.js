@@ -20,7 +20,6 @@ const totalCheckout = document.getElementById("totalCheckout")
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
-const cemail = document.getElementById("cemail");
 const cardNumber = document.getElementById("card-number");
 const expDate = document.getElementById("exp-date");
 const csv = document.getElementById("csv");
@@ -78,6 +77,13 @@ const onBlur = (e, errorText) => {
     }
 }
 
+const inputEmpty = (value) => {
+    if (value === '') {
+        return true;
+    }
+    return false;
+}
+
 const getEmailError = (e) => {
     const currentElement = e.target;
     const inputValue = currentElement.value;
@@ -98,11 +104,21 @@ const getFieldError = (e) => {
     return '';
 }
 
-const inputEmpty = (value) => {
-    if (value === '') {
-        return true;
+const getCardError = (e) => {
+    const currentElement = e.target;
+    const inputValue = currentElement.value;
+    if (inputEmpty(inputValue)) {
+        return 'Card is required';
+    } else if (/[^0-9]/.test(inputValue)) {
+        return 'Fill out with only digits [0-9]';
+    } else if (!validator.isValid(inputValue)){
+        return 'Card number is not valid';
     }
-    return false;
+    return '';
+}
+const onBlurField = (e) => {
+    const errorText = getFieldError(e);
+    onBlur(e, errorText);
 }
 
 const onBlurEmail = (e) => {
@@ -110,8 +126,8 @@ const onBlurEmail = (e) => {
     onBlur(e, errorText);
 }
 
-const onBlurField = (e) => {
-    const errorText = getFieldError(e);
+const onBlurCard = (e) => {
+    const errorText = getCardError(e);
     onBlur(e, errorText);
 }
 
@@ -122,6 +138,7 @@ generalTicketQuantity.addEventListener("change", updateTotalPrice);
 partyTicketQuantity.addEventListener("change", updateTotalPrice);
 
 // firstName.addEventListener("blur", onBlurField);
+
 firstName.onblur = onBlurField;
 lastName.onblur = onBlurField;
 email.onblur = onBlurEmail;
