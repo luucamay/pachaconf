@@ -65,52 +65,54 @@ const updateTotalPrice = function () {
     totalBuy.textContent = '$ ' + total.toFixed(2);
 }
 
-const inputEmpty = (value) => {
-    if (value === '') {
-        return true;
-    }
-    return false;
-}
-const checkRequired = (e) => {
-    // TODO check target type!!
-    console.log('you left this input');
-    return 0;
+const onBlur = (e, errorText) => {
     const currentElement = e.target;
-    let errorMessageText = inputEmpty(currentElement.value);
     const errorMessageElement = currentElement.nextElementSibling;
-    if (errorMessageText === '') {
+    errorMessageElement.textContent = errorText;
+    if (errorText === '') {
         currentElement.classList.remove('required');
         errorMessageElement.classList.add('hide');
     } else {
         currentElement.classList.add('required');
         errorMessageElement.classList.remove('hide');
-        errorMessageElement.textContent = `${currentElement.placeholder} ${errorMessageText}`;
     }
 }
 
 const getEmailError = (e) => {
     const currentElement = e.target;
     const inputValue = currentElement.value;
-    if (inputEmpty(inputValue)){
+    if (inputEmpty(inputValue)) {
         return 'Email is required';
-    } else if(!/\S+@\S+\.\S+/.test(inputValue)){
+    } else if (!/\S+@\S+\.\S+/.test(inputValue)) {
         return 'Email is not valid';
     }
     return '';
 }
 
+const getFieldError = (e) => {
+    const currentElement = e.target;
+    const inputValue = currentElement.value;
+    if (inputEmpty(inputValue)) {
+        return `${currentElement.placeholder} is required`;
+    }
+    return '';
+}
+
+const inputEmpty = (value) => {
+    if (value === '') {
+        return true;
+    }
+    return false;
+}
+
 const onBlurEmail = (e) => {
     const errorText = getEmailError(e);
-    const currentElement = e.target;
-    const errorMessageElement = currentElement.nextElementSibling;
-    errorMessageElement.textContent = errorText;
-    if (errorText === ''){
-        currentElement.classList.remove('required');
-        errorMessageElement.classList.add('hide');
-    } else {
-        currentElement.classList.add('required');
-        errorMessageElement.classList.remove('hide');
-    }
+    onBlur(e, errorText);
+}
+
+const onBlurField = (e) => {
+    const errorText = getFieldError(e);
+    onBlur(e, errorText);
 }
 
 buyTicketsBtn.addEventListener("click", buyTickets);
@@ -118,11 +120,11 @@ checkoutBtn.addEventListener("click", checkout);
 placeOrderBtn.addEventListener("click", placeOrder);
 generalTicketQuantity.addEventListener("change", updateTotalPrice);
 partyTicketQuantity.addEventListener("change", updateTotalPrice);
-// firstName.addEventListener("change", checkRequired);
-firstName.onblur = checkRequired;
-lastName.onblur = checkRequired;
+
+// firstName.addEventListener("blur", onBlurField);
+firstName.onblur = onBlurField;
+lastName.onblur = onBlurField;
 email.onblur = onBlurEmail;
-cemail.onblur = checkRequired;
-cardNumber.onblur = checkRequired;
-expDate.onblur = checkRequired;
-csv.onblur = checkRequired;
+cardNumber.onblur = onBlurCard;
+expDate.onblur = onBlurField;
+csv.onblur = onBlurField;
