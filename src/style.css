@@ -32,7 +32,6 @@ input.required {
 }
 
 header {
-  padding: 8px 16px;
   grid-area: hd;
   background-color: var(--primary-color);
   display: flex;
@@ -41,7 +40,9 @@ header {
   position: fixed;
   width: 100%;
 }
-
+header > * {
+  padding: 8px 8px;
+}
 header h1 {
   font-size: 1em;
 }
@@ -57,6 +58,20 @@ header button {
   height: 100%;
   width: 50px;
   padding: 0;
+}
+
+header > a {
+  display: flex;
+  text-decoration: none;
+  color: var(--black-solid);
+}
+
+header > a > img {
+  width: 36px;
+}
+
+header > a:hover {
+  background-color: var(--primary-color-light);
 }
 
 footer {
