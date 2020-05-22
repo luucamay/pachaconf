@@ -162,6 +162,21 @@ h3, h1 {
 #thanks-email, #transformed-card {
   font-weight: normal;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container * {
+  margin: 8px 0;
+}
+
+button:hover {
+  background-color: var(--primary-color-night);
+}
 /* Nice to have: put the input after change text color red 
 input:required::placeholder{
   color: red;
