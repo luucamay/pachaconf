@@ -19,8 +19,7 @@ body {
   display: grid;
   height: 100vh;
   grid-template-rows:
-    50px 3fr auto
-    50px;
+    50px 3fr auto;
   grid-template-areas:
     "hd"
     "main"
@@ -38,15 +37,14 @@ input.required {
 }
 
 header {
+  padding: 8px 16px;
+  grid-area: hd;
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;  
 }
 
-header * {
-  padding: 8px;
-}
 header h1 {
   font-size: 1em;
 }
@@ -63,6 +61,20 @@ header button {
   width: 50px;
 }
 
+footer {
+  background-color: var(--primary-color);
+  grid-area: ft;
+  text-align: center;
+  padding: 16px; 
+  height: 50px;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Nice to have: put the input after change text color red 
 input:required::placeholder{
   color: red;
