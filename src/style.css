@@ -61,19 +61,14 @@ header button {
   height: 100%;
 }
 
-header > a {
+header > div {
   display: flex;
   text-decoration: none;
-  color: var(--black-solid);
-  border: 1.5px solid #000;
+  color: var(--black-solid)
 }
 
-header > a > img {
+header > div > img {
   width: 36px;
-}
-
-header > a:hover {
-  background-color: var(--primary-color-light);
 }
 
 footer {
