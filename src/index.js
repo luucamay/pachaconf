@@ -4,12 +4,13 @@ let total = 0.00;
 let allInputsValidPlaceOrder = true;
 
 const homeView = document.getElementById('home-view');
+const buyView = document.getElementById('buy-view');
 const checkoutView = document.getElementById('checkout-view');
 const thanksView = document.getElementById('thanks-view');
+const goHomeBtn = document.getElementById('go-home');
 const buyTicketsBtn = document.getElementById('buy-tickets');
 const placeOrderBtn = document.getElementById('place-order');
 // Variables from buyView
-const buyView = document.getElementById('buy-view');
 const checkoutBtn = document.getElementById('checkout');
 const generalTicketQuantity = document.getElementById('ticket-quantity-1');
 const partyTicketQuantity = document.getElementById('ticket-quantity-2');
@@ -151,11 +152,29 @@ const placeOrder = (evt) => {
     }
 }
 
+const goHome = () => {
+    generalTicketQuantity.value = 0;
+    partyTicketQuantity.value = 0;
+    totalBuy.textContent = '';
+    totalCheckout.textContent = '';
+    firstName.value = '';
+    lastName.value = '';
+    email.value = '';
+    cardNumber.value = '';
+    expDate.value = '';
+    csv.value = '';
+    homeView.classList.remove('hide');
+    buyView.classList.add('hide');
+    checkoutView.classList.add('hide');
+    thanksView.classList.add('hide');
+}
+
 buyTicketsBtn.addEventListener('click', buyTickets);
 checkoutBtn.addEventListener('click', checkout);
 placeOrderBtn.addEventListener('click', placeOrder);
 generalTicketQuantity.addEventListener('change', updateTotalPrice);
 partyTicketQuantity.addEventListener('change', updateTotalPrice);
+goHomeBtn.addEventListener('click', goHome);
 
 // firstName.addEventListener('blur', onBlurField);
 
