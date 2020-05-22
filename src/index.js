@@ -3,41 +3,41 @@ import validator from './validator.js';
 let total = 0.00;
 let allInputsValidPlaceOrder = true;
 
-const homeView = document.getElementById("homeView");
-const checkoutView = document.getElementById("checkoutView");
-const thanksView = document.getElementById("thanksView");
-const buyTicketsBtn = document.getElementById("buyTickets");
-const placeOrderBtn = document.getElementById("placeOrder");
+const homeView = document.getElementById('homeView');
+const checkoutView = document.getElementById('checkoutView');
+const thanksView = document.getElementById('thanksView');
+const buyTicketsBtn = document.getElementById('buyTickets');
+const placeOrderBtn = document.getElementById('placeOrder');
 // Variables from buyView
-const buyView = document.getElementById("buyView");
-const checkoutBtn = document.getElementById("checkout");
-const generalTicketQuantity = document.getElementById("ticket-quantity-1");
-const partyTicketQuantity = document.getElementById("ticket-quantity-2");
-const agreeTermsConditions = document.getElementById("agreeTermsConditions");
-const totalBuy = document.getElementById("totalBuy")
-const totalCheckout = document.getElementById("totalCheckout")
+const buyView = document.getElementById('buyView');
+const checkoutBtn = document.getElementById('checkout');
+const generalTicketQuantity = document.getElementById('ticket-quantity-1');
+const partyTicketQuantity = document.getElementById('ticket-quantity-2');
+const agreeTermsConditions = document.getElementById('agreeTermsConditions');
+const totalBuy = document.getElementById('totalBuy')
+const totalCheckout = document.getElementById('totalCheckout')
 // Variables from checkoutView
-const firstName = document.getElementById("first-name");
-const lastName = document.getElementById("last-name");
-const email = document.getElementById("email");
-const cardNumber = document.getElementById("card-number");
-const expDate = document.getElementById("exp-date");
-const csv = document.getElementById("csv");
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const email = document.getElementById('email');
+const cardNumber = document.getElementById('card-number');
+const expDate = document.getElementById('exp-date');
+const csv = document.getElementById('csv');
 // Variables from thanksView
-const thanksName = document.getElementById("thanks-name");
-const thanksEmail = document.getElementById("thanks-email");
-const transformedCard = document.getElementById("transformed-card");
+const thanksName = document.getElementById('thanks-name');
+const thanksEmail = document.getElementById('thanks-email');
+const transformedCard = document.getElementById('transformed-card');
 
 const buyTickets = function () {
-    homeView.classList.add("hide");
-    buyView.classList.remove("hide");
+    homeView.classList.add('hide');
+    buyView.classList.remove('hide');
 }
 
 const checkout = function (evt) {
     evt.preventDefault();
     if (total > 0 && agreeTermsConditions.checked) {
-        buyView.classList.add("hide");
-        checkoutView.classList.remove("hide");
+        buyView.classList.add('hide');
+        checkoutView.classList.remove('hide');
         totalCheckout.textContent = '$ ' + total.toFixed(2);
     }
 }
@@ -135,8 +135,8 @@ const placeOrder = function (evt) {
     errors[5] = getFieldError(csv);
 
     if (allInputsValidPlaceOrder) {
-        checkoutView.classList.add("hide");
-        thanksView.classList.remove("hide");
+        checkoutView.classList.add('hide');
+        thanksView.classList.remove('hide');
         thanksName.textContent = firstName.value;
         thanksEmail.textContent = email.value;
         transformedCard.textContent = validator.maskify(cardNumber.value);
@@ -150,13 +150,13 @@ const placeOrder = function (evt) {
     }
 }
 
-buyTicketsBtn.addEventListener("click", buyTickets);
-checkoutBtn.addEventListener("click", checkout);
-placeOrderBtn.addEventListener("click", placeOrder);
-generalTicketQuantity.addEventListener("change", updateTotalPrice);
-partyTicketQuantity.addEventListener("change", updateTotalPrice);
+buyTicketsBtn.addEventListener('click', buyTickets);
+checkoutBtn.addEventListener('click', checkout);
+placeOrderBtn.addEventListener('click', placeOrder);
+generalTicketQuantity.addEventListener('change', updateTotalPrice);
+partyTicketQuantity.addEventListener('change', updateTotalPrice);
 
-// firstName.addEventListener("blur", onBlurField);
+// firstName.addEventListener('blur', onBlurField);
 
 firstName.onblur = onBlurField;
 lastName.onblur = onBlurField;
